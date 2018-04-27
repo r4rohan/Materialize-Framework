@@ -1,0 +1,45 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+   <title>Signin</title>
+   <style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+</style>
+<script type="text/javascript">
+  function displayDate() {
+    document.getElementById("demo").innerHTML = alert("Congrats, you are signed in....");
+}
+
+  
+</script>
+  </head>
+
+  <body class="text-center" background="Debian-Plain-Background.jpg" style="background-repeat: no-repeat;background-position: center;background-size: cover">
+    
+    <form class="form-signin" >
+      <div align="center">
+      <img class="mb-4" src="https://www.d2cybersecurity.com/images/LMS.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal"><b>Please sign in:</b></h1><br>
+      <label for="inputEmail" class="sr-only"><b>Email address:</b></label><br>
+      <input type="email" id="inputEmail" class="form-control," placeholder="Email address" required autofocus><br>
+      <label for="inputPassword" class="sr-only"><b>Password:</b></label><br>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required><br>
+    </div>
+      <div class="checkbox mb-3" align="center">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <center><button  id="demo" type="submit" onclick="displayDate()">Sign in</button></center>
+      <center><p >&copy; 2018-2019(Internet and Web Technology Project)</p></center>
+
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,46 @@
+
+<html>
+<head>
+<script type="text/javascript">
+    var intervalId;
+
+    function startImageSlideShow() 
+    {
+        intervalId = setInterval(setImage, 500);
+    }
+
+    function stopImageSlideShow() 
+    {
+        clearInterval(intervalId);
+    }
+
+    function setImage() 
+    {
+        var imageSrc = document.getElementById("image").getAttribute("src");
+        var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf("/") + 1,imageSrc.lastIndexOf("/") + 2);
+        if (currentImageNumber == 6) 
+        {
+            currentImageNumber = 0;
+        }
+        document.getElementById("image").setAttribute("src", ""  +     (Number(currentImageNumber) + 1) + ".jpg");
+    }
+</script>
+</head>
+<div >
+<body style="background-image:url(Plain-Wood-Background.jpg)">
+    <h1 style="color: white;">WELCOME TO THE WORLD OF LMS</h1>
+    <div style="border: 12px solid white;">
+<img id="image" src="1.jpg" style="width: 1311; height: 510px" />
+</div>
+<br /> <br /> <br />
+<center><input type="button" value="START" onclick="startImageSlideShow()" style="color: white; background-color: black;" />
+<input type="button" value="STOP" onclick="stopImageSlideShow()" style="color: white; background-color: black;;"/></center>
+</div>
+<div>
+
+<h3 style="color: white;">(Please click on the images to go to various pages...)</h3>
+<p style="color: white;">To place order,click on the button...</p>
+<a href="placeOrder.html"><button style="color: white; background-color: black;">Order</button></a>
+</div>
+</body>
+</html>
